@@ -2,9 +2,10 @@
 
 namespace {{ $namespace }};
 
-use CustomLog\Drivers\CsvDriver
+use CustomLog\Drivers\CsvDriver;
+use CustomLog\ProcessorRecordBag;
 
-abstract class {{ $class }} extends CsvDriver
+class {{ $class }} extends CsvDriver
 {
     /**
     * ログフォーマット定義
