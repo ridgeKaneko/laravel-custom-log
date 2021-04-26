@@ -1,4 +1,4 @@
-{{ $phpTag }}
+{!! $phpTag !!}
 
 namespace {{ $namespace }};
 
