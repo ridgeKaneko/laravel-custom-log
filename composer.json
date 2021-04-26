@@ -3,6 +3,12 @@
     "description": "extend laravel logger.",
     "type": "library",
     "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "ridgeKaneko",
+            "email": "harutarinn@gmail.com"
+        }
+    ],
     "require": {
         "laravel/framework": ">=5.6.0"
     },
