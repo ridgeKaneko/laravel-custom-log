@@ -36,6 +36,14 @@ class {{ $class }} extends CsvDriver
     protected $dateFormat = "Y-m-d";
 
     /**
+    *
+    * 出力時文字コード定義
+    *
+    * @var string
+    */
+    protected $charEncoding;
+
+    /**
     * プロセッサクラス名一覧配列
     *
     * 例：[MonologProcessor::class,TestProcessor::class]
