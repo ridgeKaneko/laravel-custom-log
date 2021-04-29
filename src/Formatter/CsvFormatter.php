@@ -76,4 +76,20 @@ class CsvFormatter extends LineFormatter
 
         return $output."\r\n";
     }
+
+    public function stringify($value): string
+    {
+        return $this->escapeCsv(parent::stringify($value));
+    }
+
+    /**
+     * 文字列をcsv文字列形式に変換
+     *
+     * @param $str
+     * @return string
+     */
+    private function escapeCsv($str)
+    {
+        return '"'.str_replace('"','""',$str).'"';
+    }
 }

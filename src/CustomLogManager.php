@@ -27,4 +27,15 @@ class CustomLogManager extends LogManager
     {
         return $this->get(($driver ?? $this->pinnedChannel) ?? $this->getDefaultDriver());
     }
+
+    protected function configurationFor($name)
+    {
+        $config = parent::configurationFor($name);
+
+        if(!array_key_exists('name',$config)) {
+            $config['name'] = $name;
+        }
+
+        return $config;
+    }
 }
