@@ -34,6 +34,8 @@ abstract class BaseMakeCommand extends Command
         fwrite($stream, $this->template()->render());
 
         fclose($stream);
+
+        $this->cecho('LogDriver created successfully.',32);
     }
 
     /**
@@ -73,6 +75,16 @@ abstract class BaseMakeCommand extends Command
     protected function view($path,$params)
     {
         return app(Factory::class)->file($path,$params);
+    }
+
+    /**
+     * 文字列コンソール出力
+     *
+     * @param $m
+     * @param int $c
+     */
+    protected function cecho($m, $c = 30) {
+        echo sprintf("\033[%dm%s\033[m", $c, $m);
     }
 
     /**
